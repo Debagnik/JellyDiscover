@@ -265,6 +265,8 @@ def action():
                 flash("Cleanup Utility started.")
             else: flash("Error: cleaner not found.")
 
+        # TODO: replace with a more robust service management system, or just get rid of it. 
+        # The fuck is NSSM.EXE why is there a windows binary without the source? why do you need a seperate binary for restarting a service?
         elif cmd == "restart_service":
             if utils.IS_WINDOWS and not utils.IS_DOCKER:
                  # Windows NSSM Logic (Existing)
